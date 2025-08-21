@@ -62,7 +62,19 @@ html,body{
 .badges{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
 
 /* Apple-style frosted pills */
-.badge{
+.badge {
+  background: rgba(255,255,255,0.08);
+  color: var(--text);
+  border-radius: 999px;
+  padding: 7px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.25px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
   background: rgba(255,255,255,0.08);
   color: var(--text);
   border: 1px solid rgba(255,255,255,0.10);
@@ -77,12 +89,27 @@ html,body{
   transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .badge:hover{
-  background: rgba(255,255,255,0.12);
+  background: rgba(200,164,75,0.25);
+  color: #f5f1e6;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
   transform: translateY(-2px) scale(1.05);
 }
 
 /* SAFE badge inside card (green, subtle) */
-.safe-badge{
+.safe-badge {
+  display:inline-block;
+  margin-bottom: 8px;
+  background: rgba(64, 186, 108, 0.12);
+  color: #7ED9A0;
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 500;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
   display:inline-block; margin-bottom:10px;
   background: rgba(64, 186, 108, 0.15);
   color: #9BE3B4;
@@ -92,7 +119,11 @@ html,body{
   box-shadow: 0 2px 6px rgba(0,0,0,0.12);
   transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
 }
-.safe-badge:hover{ transform: translateY(-2px); }
+.safe-badge:hover{
+  background: rgba(64,186,108,0.2);
+  color: #f5f1e6;
+  transform: translateY(-2px);
+}
 
 /* Bottom dock */
 .filter-dock{
@@ -107,7 +138,20 @@ html,body{
   border: 1px solid rgba(255,255,255,0.12); border-radius:20px;
   box-shadow: 0 12px 28px rgba(0,0,0,.35);
 }
-.filter-btn{
+.filter-btn {
+  background: linear-gradient(145deg, #E6B15C, #D99A3C);
+  color: #1a1a1a;
+  border: none;
+  border-radius: 999px;
+  padding: 10px 18px;
+  font-size: 14px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 6px 16px rgba(0,0,0,.25);
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
   background: var(--cta); color:#1a1a1a; border:1px solid rgba(0,0,0,.1);
   border-radius:999px; padding:8px 14px; font-size:14px;
   display:inline-flex; align-items:center; gap:8px;
@@ -145,7 +189,25 @@ html,body{
   .grid{grid-template-columns:1fr 1fr;gap:12px}
   .card{padding:14px;border-radius:14px}
   .header-logo{width:72px}
-  .filter-btn{padding:7px 12px;font-size:13px}
+  .filter-btn {
+  background: linear-gradient(145deg, #E6B15C, #D99A3C);
+  color: #1a1a1a;
+  border: none;
+  border-radius: 999px;
+  padding: 10px 18px;
+  font-size: 14px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 6px 16px rgba(0,0,0,.25);
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}padding:7px 12px;font-size:13px}
   .filter-panel{bottom: calc(env(safe-area-inset-bottom) + 58px)}
   .filter-panel .chips{padding:5px 6px;gap:6px}
+}
+
+.filter-btn:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,.3);
 }
