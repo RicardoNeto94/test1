@@ -81,7 +81,6 @@ html,body{margin:0;color:var(--text);background: radial-gradient(1100px 320px at
   .filter-panel .chips{background:rgba(255,255,255,0.06);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:6px 8px;max-width:920px;margin:0 12px;gap:6px;display:flex;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;margin-bottom:20px !important;}
 }
 
-.safe-badge {
   position: absolute !important;
   top: 10px !important;
   right: 10px !important;
@@ -113,7 +112,6 @@ html,body{margin:0;color:var(--text);background: radial-gradient(1100px 320px at
 }
 
 /* === FIXED SAFE BADGE (one check only) === */
-.safe-badge {
   position: absolute !important;
   top: 10px !important;
   right: 10px !important;
@@ -133,7 +131,6 @@ html,body{margin:0;color:var(--text);background: radial-gradient(1100px 320px at
   text-indent: -9999px !important;
   overflow: hidden !important;
 }
-.safe-badge::before {
   content: "✓" !important;
   font-size: 14px !important;
   font-weight: 700 !important;
