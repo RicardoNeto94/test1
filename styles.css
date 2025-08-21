@@ -237,3 +237,23 @@ html,body{margin:0;color:var(--text);background: radial-gradient(1100px 320px at
   top: 8px !important;
   right: 8px !important;
 }
+
+/* === Thicker presets bar & closer to Filters button === */
+.filter-panel {
+  bottom: calc(env(safe-area-inset-bottom) + 80px) !important; /* was ~110px */
+}
+.filter-panel .chips {
+  padding: 10px 12px !important;     /* thicker bar */
+  border-radius: 20px !important; 
+  gap: 8px !important;
+}
+.chip {
+  padding: 8px 12px !important;      /* bigger pills */
+  font-size: 14px !important;
+  border-radius: 999px !important;
+}
+@media (max-width:480px){
+  .filter-panel { bottom: calc(env(safe-area-inset-bottom) + 76px) !important; }
+  .filter-panel .chips { padding: 10px 10px !important; border-radius: 18px !important; }
+  .chip { padding: 8px 12px !important; font-size: 13.5px !important; }
+}
