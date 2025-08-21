@@ -211,3 +211,126 @@ html,body{
   transform: translateY(-2px);
   box-shadow: 0 10px 26px rgba(0,0,0,0.38);
 }
+
+
+
+/* === Overrides for glass button, safe badge, and spacing === */
+
+.filter-btn {
+  background: rgba(255,255,255,0.10) !important;
+  color: var(--text) !important;
+  border: 1px solid rgba(255,255,255,0.22) !important;
+  border-radius: 999px !important;
+  padding: 12px 20px !important;
+  font-size: 14px !important;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.35) !important;
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.filter-btn:hover {
+  background: rgba(255,255,255,0.16) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(0,0,0,0.38);
+}
+
+.card { position: relative !important; }
+
+.safe-badge {
+  position: absolute !important;
+  top: 10px !important;
+  right: 10px !important;
+  width: 26px !important;
+  height: 26px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: rgba(64,186,108,0.18) !important;
+  border: 1px solid rgba(64,186,108,0.35) !important;
+  border-radius: 50% !important;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25) !important;
+  backdrop-filter: blur(6px) !important;
+  -webkit-backdrop-filter: blur(6px) !important;
+  font-size: 0 !important;
+}
+.safe-badge::before {
+  content: "✓" !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  color: #7ED9A0 !important;
+}
+
+.filter-panel {
+  bottom: calc(env(safe-area-inset-bottom) + 96px) !important;
+}
+
+.filter-panel .chips {
+  margin-bottom: 14px !important;
+}
+
+
+/* === FINAL OVERRIDES === */
+
+/* Ensure cards can position absolute children */
+.card { position: relative !important; }
+
+/* Full glass Filters button */
+.filter-btn {
+  background: rgba(255,255,255,0.10) !important;
+  color: var(--text) !important;
+  border: 1px solid rgba(255,255,255,0.22) !important;
+  border-radius: 999px !important;
+  padding: 12px 20px !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.35) !important;
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1) !important;
+}
+.filter-btn:hover {
+  background: rgba(255,255,255,0.16) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 10px 26px rgba(0,0,0,0.38) !important;
+}
+
+/* SAFE badge as green check circle at top-right */
+.safe-badge {
+  position: absolute !important;
+  top: 10px !important;
+  right: 10px !important;
+  width: 26px !important;
+  height: 26px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: rgba(64,186,108,0.18) !important;
+  border: 1px solid rgba(64,186,108,0.35) !important;
+  border-radius: 50% !important;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25) !important;
+  backdrop-filter: blur(6px) !important;
+  -webkit-backdrop-filter: blur(6px) !important;
+  font-size: 0 !important; /* hide text */
+  color: transparent !important;
+}
+.safe-badge::before {
+  content: "✓" !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  color: #7ED9A0 !important;
+}
+
+/* Extra spacing between preset chips and Filters button */
+.filter-panel {
+  bottom: calc(env(safe-area-inset-bottom) + 100px) !important;
+}
+.filter-panel .chips {
+  margin-bottom: 16px !important;
+}
